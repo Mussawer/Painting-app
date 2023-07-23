@@ -1,22 +1,9 @@
-import React, { FC } from "react";
-import "../index.css";
+import React from "react";
 
-interface sizePickerProps {
-  sizes: number[];
-  activeSize: number;
-  setActiveSize: (size: number) => void;
-  activeColor: string | undefined;
-}
-
-const SizePicker: FC<sizePickerProps> = ({
-  activeColor,
-  activeSize,
-  setActiveSize,
-  sizes,
-}: sizePickerProps) => {
+const SizePicker = ({ sizes, activeSize, setActiveSize, activeColor }) => {
   return (
     <fieldset className="size-picker">
-      {sizes.map((size: number, i: number) => (
+      {sizes.map((size, i) => (
         <label key={i}>
           <input
             name="size"
