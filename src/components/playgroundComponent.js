@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useRef } from "react";
 import { HexColorPicker } from "react-colorful";
 import Name from "./NameComponent";
-import ColorPicker from "./ColorPickerComponent";
 import Canvas from "./CanvasComponent";
-import RefreshButton from "./RefreshButtonComponent";
 import useWindowSize from "../hooks/useWindowSize";
 import SizePicker from "./SizePickerComponent";
 import InfoButton from "./InfoButtonComponent";
@@ -44,7 +42,6 @@ const PlayGroundComponent = () => {
             setActiveSize={setActiveSize}
             activeColor={activeColor}
           />
-          <RefreshButton cb={getColors} />
         </div>
       </header>
       {activeColor && activeSize && (
